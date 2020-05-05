@@ -26,8 +26,8 @@
     <platform name="android">
         <preference name="GOOGLE_PLAY_SERVICES_VERSION" default="11+"/>
         <preference name="ANDROID_SUPPORT_LIBRARY_VERSION" default="26+"/>
-        <preference name="ICON" default="@mipmap/icon" />
-        <preference name="SMALL_ICON" default="@mipmap/icon" />
+        <preference name="ICON" default="@mipmap/ic_launcher" />
+        <preference name="SMALL_ICON" default="@mipmap/ic_launcher" />
         <preference name="ACCOUNT_NAME" default="@string/app_name" />
         <preference name="ACCOUNT_LABEL" default="@string/app_name" />
         <preference name="ACCOUNT_TYPE" default="$PACKAGE_NAME.account" />
@@ -128,6 +128,8 @@
         <resource-file src="android/common/src/main/res/xml/syncadapter.xml" target="res/xml/syncadapter.xml" />
         <resource-file src="android/common/src/main/res/xml/authenticator.xml" target="res/xml/authenticator.xml" />
 
+        <resource-file src="android/common/src/main/res/mipmap-xxxhdpi/ic_launcher.png" target="res/mipmap-xxxhdpi/ic_launcher.png" />
+
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
             <service
@@ -183,6 +185,7 @@
             <uses-permission android:name="android.permission.WAKE_LOCK" />
             <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
             <uses-permission android:name="android.hardware.location" />
+            <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
         </config-file>
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="BackgroundGeolocation">
