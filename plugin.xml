@@ -269,14 +269,7 @@
         <framework src="AudioToolbox.framework" weak="true" />
         <framework src="AVFoundation.framework" weak="true" />
         <framework src="libsqlite3.dylib" weak="true" />
-        <podspec>
-            <config>
-                <source url="https://github.com/CocoaPods/Specs.git"/>
-            </config>
-            <pods use-frameworks="true">
-                <pod name="CocoaLumberjack" spec="3.6.0" />
-            </pods>
-        </podspec>
+        <framework src="CocoaLumberjack" type="podspec" spec="2.4.0"/>
         <!-- Generated with gen_sources.sh @ 2018-05-22 13:19:11 -->
         <header-file src="ios/CDVBackgroundGeolocation/CDVBackgroundGeolocation.h" />
         <source-file src="ios/CDVBackgroundGeolocation/CDVBackgroundGeolocation.m" />
